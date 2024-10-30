@@ -62,8 +62,8 @@ const frightfulFavoritesData = [
 ];
 
 const nowInTheatersData = [
-    { img: 'path/to/john-wick.jpg', title: 'John Wick', video: 'path/to/john-wick.mkv', audienceScore: '86%', criticScore: '81%',watchlistLink:'https://ankitbhagat2062.github.io/Ultra-Edit/' },
     { img: 'path/to/emilia-periz.jpg', title: 'Emilia Pérez', video: 'path/to/emilia-perez.mp4', audienceScore: '85%', criticScore: '--',watchlistLink:'https://ankitbhagat2062.github.io/Online-tools/' },
+    { img: 'path/to/john-wick.jpg', title: 'John Wick', video: 'path/to/john-wick.mkv', audienceScore: '86%', criticScore: '81%',watchlistLink:'https://ankitbhagat2062.github.io/Ultra-Edit/' },
     { img: 'path/to/Spider-Man-No-Way-home.jpeg', title: 'Spider-Man No Way Home', video: 'path/to/Spider-Man-No-Way-home.mkv', audienceScore: '85%', criticScore: '80%',watchlistLink:'https://ankitbhagat2062.github.io/Online-tools/' },
     // Add more items as needed
 ];
