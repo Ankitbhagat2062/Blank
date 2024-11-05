@@ -49,7 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
             videoPlayer.play();
         });
     });
-
+    movieCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoSrc = card.getAttribute('data-video');
+            const iframe = document.createElement('iframe');
+            iframe.src = videoSrc;
+            iframe.width = "640"; // Adjust width
+            iframe.height = "360"; // Adjust height
+            iframe.frameBorder = "0";
+            iframe.allow = "autoplay; fullscreen";
+            iframe.allowFullscreen = true;
+    
+            videoModal.innerHTML = ''; // Clear previous content
+            videoModal.appendChild(iframe);
+            videoModal.classList.add('active');
+        });
+    });
+    
     closeModal.addEventListener('click', () => {
         videoModal.classList.remove('active');
         videoPlayer.pause();
@@ -66,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sample movie data for each section
     const frightfulFavoritesData = [
-        { img: 'images/hocus-pocus.jpg', title: 'Hocus and Pocus', video: 'videos/video-hocus-pocus.mp4' },
-        { img: 'images/agatha.jpg', title: 'Agatha All Along', video: 'videos/video-agatha.mp4' },
+        { img: 'images/hocus-pocus.jpg', title: 'Hocus and Pocus', video: 'https://player.vimeo.com/video/428046504?title=0&byline=0&portrait=0&badge=0&dnt=1' },
+        { img: 'images/agatha.jpg', title: 'Agatha All Along', video: 'https://player.vimeo.com/video/1026430907?title=0&byline=0&portrait=0&badge=0&dnt=1' },
         { img: 'images/deadpool-wolverin.jpg', title: 'Deadpool and Wolverine', video: 'videos/video-deadpool-wolverine.mp4' },
         { img: 'images/image4.webp', title: 'Venom The Last Dance', video: 'videos/venom3.mkv' },
         { img: 'images/burton.jpg', title: "Tim Burton's The Nightmare before Christmas", video: 'videos/video-burton.mp4' },
@@ -78,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { img: 'path/to/emilia-periz.jpg', title: 'Emilia Pérez', video: 'videos/emilia-perez.mp4', audienceScore: '85%', criticScore: '--', watchlistLink: 'https://ankitbhagat2062.github.io/Online-tools/' },
         { img: 'path/to/john-wick.jpg', title: 'John Wick', video: 'videos/john-wick.mkv', audienceScore: '86%', criticScore: '81%', watchlistLink: 'https://ankitbhagat2062.github.io/Ultra-Edit/' },
         { img: 'path/to/Spider-Man-No-Way-Home.jpeg', title: 'Spider-Man No Way Home', video: 'videos/Spider-Man-No-Way-Home.mkv', audienceScore: '85%', criticScore: '80%', watchlistLink: 'https://ankitbhagat2062.github.io/Online-tools/' },
-        { img: 'path/to/venom2.jpeg', title: 'The Venom 2 (II)', video: 'videos/venom2.mkv', audienceScore: '95%', criticScore: '86%', watchlistLink: 'https://ankitbhagat2062.github.io/Online-tools/' },
+        { img: 'path/to/venom2.jpeg', title: 'The Venom 2 (II)', video: 'https://player.vimeo.com/video/1026396170?title=0&byline=0&portrait=0&badge=0&dnt=1', audienceScore: '95%', criticScore: '86%', watchlistLink: 'https://ankitbhagat2062.github.io/Online-tools/' },
         // Add more items as needed
     ];
 
@@ -93,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvShowsData = [
         { img: 'path/to/tvshow1.jpeg', title: 'Friends Season 1', video: 'videos/friends-season1.mp4', audienceScore: '89%', criticScore: '90%', watchlistLink: 'https://ankitbhagat2062.github.io/Geometric-Dash-The-Endless-Runner/' },
         { img: 'path/to/tvshow2.jpg', title: 'Breaking Bad', video: 'videos/breaking-brad.mp4', audienceScore: '95%', criticScore: '92%', watchlistLink: 'https://ankitbhagat2062.github.io/Tic-Tac-Toe/' },
-        { img: 'path/to/tvshow3.png', title: 'Loki Season 1 Episode 1', video: 'videos/loki.mkv', audienceScore: '98%', criticScore: '99%', watchlistLink: 'https://ankitbhagat2062.github.io/Watch-Movies/' },
+        { img: 'path/to/tvshow3.png', title: 'Loki Season 1 Episode 1', video: 'https://player.vimeo.com/video/1025808711?title=0&byline=0&portrait=0&badge=0&dnt=1', audienceScore: '98%', criticScore: '99%', watchlistLink: 'https://ankitbhagat2062.github.io/Watch-Movies/' },
         // Add more items as needed
     ];
     const allTimeFavoritesData = [
