@@ -1,0 +1,18 @@
+html ,body{
+	margin: 0;
+	padding: 0;
+}
+.d-none{
+	display: none;
+}
+#btn:hover{
+    border-color: #429c65;
+    color: #fff;
+    background-color: #618d72dc;
+    border-color: #4aae70ee;
+	scroll-behavior: inherit;
+}
+/* .btn:hover{
+    color: #fff;
+    background-color: #245580;
+} */

@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #000000 !important;
+  color: green;
+}
+#language,.spinner-border .visual{
+  margin: 10px;
+}
+.d-flex{
+  display: flex;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.visual{
+  font-size: 1.5rem;
+  color: darkgreen;
+}
