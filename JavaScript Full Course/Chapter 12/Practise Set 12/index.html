@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="clefthalf">
+        <div id="topmenu">
+            <ul>
+                <li id="menuon">
+                    <a href="#" onclick="return popMenu('balance');">Balance</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return popMenu('principal');">Principal</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return popMenu('term');">Term</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return popMenu('rate');">Rate</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel2">
+            <form name="calform">
+                <table id="inendbalance" style="display: none;">
+                    <tbody>
+                        <tr>
+                            <td width="100">End balance</td>
+                            <td>
+                                <input type="text" name="balance" id="balance" value="30000" class="inlonger indollar">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="inprincipal" style="display: block;">
+                    <tbody>
+                        <tr>
+                            <td width="100">Principal</td>
+                            <td>
+                                <input type="text" name="principal" id="principal" value="20000"class="inlonger indollar">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="inrate" style="display: block;">
+                    <tbody>
+                        <tr>
+                            <td width="100" nowrap="">Interest rate</td>
+                            <td nowrap="">
+                                <input type="text" name="rate" value="3" class="innormal inpct">
+                                <select id="ratebase" name="ratebase" style="width:110px;">
+                                    <option value="y">per year</option>
+                                    <option value="m" selected="">per month</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table style=" width:310; align-self:center;">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="center" style="padding-top:10px;">
+                                <input type="hidden" name="ctype" id="ctype" value="balance">
+                                <input type="image" src="https://d26tpo4cm8sb6k.cloudfront.net/img/svg/calculate.svg"
+                                    value="Calculate" alt="Calculate">
+                                <img src="https://d26tpo4cm8sb6k.cloudfront.net/img/svg/clear.svg"
+                                    onclick="clealear.svgrForm(document.calform);" class="clearbtn">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>                    
+    <script src="script.js"></script>
+</body>
+
+</html>
